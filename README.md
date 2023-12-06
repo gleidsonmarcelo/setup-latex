@@ -304,6 +304,16 @@ Realizar upgrade dos pacotes via GUI - Usuário Administrador.
 sudo mpm
 ~~~
 
+* Instalar pacotes CPAN:
+
+~~~bash
+sudo cpan YAML::Tiny
+~~~
+
+~~~bash
+sudo cpan File::HomeDir
+~~~
+
 ## Configuração do Git
 
 ~~~bash
