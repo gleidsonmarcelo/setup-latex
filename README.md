@@ -42,7 +42,7 @@ wsl --list --online
 * Instalar a distribuição do GNU/Linux.
 
 ~~~powershell
-wsl --install --distribution ubuntu-22.04
+wsl --install --distribution ubuntu-24.04
 ~~~
 
 * Criação do usuário e senha do GNU/Linux.
@@ -56,7 +56,7 @@ exit
 ~~~
 
 ~~~powershell
-wsl --set-default ubuntu-22.04
+wsl --set-default ubuntu-24.04
 ~~~
 
 * Verificar as distribuições instaladas.
@@ -99,35 +99,38 @@ Será instalado o VS Code Server no WSL.
 
 ~~~json
 {
-    "workbench.startupEditor": "none",
-    "workbench.iconTheme": "material-icon-theme",
-    "workbench.colorTheme": "Dracula",
     "workbench.activityBar.location": "hidden",
+    "workbench.colorTheme": "Dracula",
+    "workbench.iconTheme": "material-icon-theme",
     "workbench.layoutControl.enabled": false,
-    "window.commandCenter": false,
-    "editor.renderLineHighlight": "gutter",
+    "workbench.startupEditor": "none",
+    "breadcrumbs.enabled": false,
+    "cSpell.language": "en,pt_BR",
     "editor.bracketPairColorization.enabled": true,
     "editor.fontFamily": "'FiraCode Nerd Font'",
-    "editor.fontSize": 14,
     "editor.fontLigatures": true,
+    "editor.fontSize": 14,
     "editor.formatOnPaste": true,
     "editor.formatOnSave": true,
     "editor.insertSpaces": true,
+    "editor.minimap.enabled": false,
+    "editor.renderLineHighlight": "gutter",
     "editor.renderWhitespace": "boundary",
+    "editor.scrollbar.horizontal": "hidden",
+    "editor.scrollbar.vertical": "hidden",
     "editor.smoothScrolling": true,
     "editor.suggestSelection": "recentlyUsedByPrefix",
     "editor.wordWrap": "off",
     "editor.wrappingIndent": "indent",
-    "editor.minimap.enabled": false,
-    "editor.scrollbar.horizontal": "hidden",
-    "editor.scrollbar.vertical": "hidden",
     "explorer.compactFolders": false,
-    "breadcrumbs.enabled": false,
     "files.trimTrailingWhitespace": true,
-    "latex-workshop.linting.chktex.enabled": true,
-    "latex-workshop.linting.run": "onType",
+    "git.autofetch": true,
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "terminal.integrated.fontFamily": "FiraCode Nerd Font",
+    "terminal.integrated.fontSize": 14,
+    "window.commandCenter": false,
     "latex-workshop.intellisense.package.enabled": true,
-    "latex-workshop.kpsewhich.enabled": true,
+    "latex-workshop.kpsewhich.bibtex.enabled": true,
     "latex-workshop.latex.autoBuild.run": "onSave",
     "latex-workshop.latex.autoClean.run": "onFailed",
     "latex-workshop.latex.clean.subfolder.enabled": true,
@@ -162,35 +165,14 @@ Será instalado o VS Code Server no WSL.
             ]
         }
     ],
+    "latex-workshop.linting.chktex.enabled": true,
+    "latex-workshop.linting.run": "onType",
     "latex-workshop.synctex.afterBuild.enabled": true,
     "latex-workshop.texdoc.args": [
         "--view",
         "--shell-escape"
     ],
     "latex-workshop.view.pdf.viewer": "tab",
-    "terminal.integrated.defaultProfile.linux": "zsh",
-    "terminal.integrated.fontFamily": "FiraCode Nerd Font",
-    "terminal.integrated.fontSize": 14,
-    "cSpell.language": "en,pt_BR",
-    "git.autofetch": true,
-    "cSpell.userWords": [
-        "benzendouros",
-        "Cæli",
-        "chktex",
-        "Cléofas",
-        "Crucis",
-        "Crúcis",
-        "Deum",
-        "Getsêmani",
-        "imolado",
-        "oitos",
-        "pungentíssimos",
-        "Tantum",
-        "vdivide",
-        "Veni",
-        "Verum"
-    ],
-    "symbols.hidesExplorerArrows": false,
 }
 ~~~
 
@@ -328,7 +310,7 @@ sudo mpm --verbose --update
 Realizar upgrade dos pacotes via GUI - Usuário Administrador.
 
 ~~~bash
-sudo mpm
+sudo miktex-console --admin
 ~~~
 
 * Instalar pacotes CPAN:
